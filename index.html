@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lysbryter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="bulb"> </div>
+        
+            <input name="onoff" id="onoff" type="checkbox">
+
+
+
+</body>
+
+<script>
+  
+    let onoff = document.getElementById('onoff');
+    let body = document.querySelector('body');
+    onoff.addEventListener('click', () => {
+        if (onoff.checked) {
+            body.classList.toggle('lighton');
+           
+
+        } else {
+            body.classList.toggle('lighton');
+        }
+    });
+</script>
+
+</body>
+</html>

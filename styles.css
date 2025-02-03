@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --bgcolor: #222;
+    --bulbbgcolor: #444;
+    --bulbtipcolor: rgb(57, 57, 57);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--bgcolor);
+}
+
+.bulb {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    background: var(--bulbbgcolor);
+    border-radius: 50%;
+}
+
+.bulb::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: 22.5px;
+    width: 35px;
+    height: 80px;
+    background: var(--bulbbgcolor);
+    border-top: 30px solid var(--bulbtipcolor);
+    border-radius: 10px;
+}
+
+
+
+input{
+    -webkit-appearance: none;
+    position: relative;
+    width: 50px;
+    height: 30px;
+    border-radius: 25px;
+    left: 18%;
+    background-color: gainsboro;
+    transition: background .3s;
+    outline: none;
+    cursor: pointer;
+}
+
+input::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    height: 1.25rem;
+    width: 1.25rem;
+    background-color: white; 
+    transition: background .3s;
+    
+}
+
+input:checked {
+    background-color: rgb(146, 255, 122); 
+}
+
+input:checked::after {
+    left: 70%
+}
+
+
+
+.lighton .bulb{
+    background: rgb(255, 255, 102);
+}
+.lighton .bulb::before{
+    background: rgb(255, 255, 102);
+    
+}
+
+
+
+
